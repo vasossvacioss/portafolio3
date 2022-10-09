@@ -168,7 +168,9 @@ header {
   margin-bottom: 8px;
   color: #ff8826;
 }
-
+.skills-bar .bar .info h5 {
+  color: #f0f0f0;
+}
 .skills-bar .bar .progress-line {
   position: relative;
   height: 10px;
