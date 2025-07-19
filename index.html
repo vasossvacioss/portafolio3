@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javier Romero - Desarrollador Web Full Stack especializado en HTML, CSS, JavaScript, Python y desarrollo de aplicaciones modernas. Portafolio de proyectos y experiencia profesional.">
+    <meta name="keywords" content="desarrollador web, full stack, JavaScript, Python, HTML, CSS, React, Node.js, portfolio, Buenos Aires">
+    <meta name="author" content="Javier Romero">
+    <meta property="og:title" content="Javier Romero - Desarrollador Web Full Stack">
+    <meta property="og:description" content="Portafolio profesional de desarrollo web con proyectos en JavaScript, Python, React y más tecnologías modernas.">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="./Style.css" />
-    <title>Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Javier Romero | Desarrollador Web Full Stack</title>
     <script type = "text/javascript">  
      
 </script> 
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+      <div class="loader"></div>
+      <div class="loading-text">Cargando...</div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <header class="header">
       <nav class="navbar">
         <div class="navbar-container container">
@@ -34,10 +52,10 @@
         </div>
       </div>
     </header>
-    <section class="about-me" id="about">
+    <section class="about-me fade-in" id="about">
       <div class="container">
         <div class="about-content">
-          <div class="left-content">
+          <div class="left-content slide-in-left">
             <div>
              <h1 class="about-heading">Acerca de mi </h1>
             </div> 
@@ -53,7 +71,7 @@
               </p>
             </div>
           </div>
-          <div class="skills">
+          <div class="skills slide-in-right">
             <div class="right-content">
               <div>
                 <h1 class="skills-heading">Mi Habilidades</h1>
@@ -119,10 +137,10 @@
               <i class="fab fa-js"></i>
               <h2>Restaurant Website UI</h2>
               <p>Construido usando  HTML,CSS,JS</p>
-              <button><a href="https://github.com/vasossvacioss/Restowebsite1" target="blank">Mira el Repositorio <i
+              <button><a href="https://github.com/vasossvacioss/Restowebsite1" target="blank"><i class="fab fa-github"></i> Mira el Repositorio <i
                 class="fas fa-external-link-alt"></i></a>
               </button>
-              <button><a href="https://vasossvacioss.github.io/Restowebsite1/" target="blank"> Dale una mirada <i
+              <button><a href="https://vasossvacioss.github.io/Restowebsite1/" target="blank"><i class="fas fa-eye"></i> Dale una mirada <i
                 class="fas fa-external-link-alt"></i></a>
             </button>
             </div>
@@ -142,10 +160,10 @@
                 <i class="fab fa-js"></i>
                 <h2>Pagina estatica para una PyMe de Fotografia</h2>
                 <p>Construido usando  HTML,CSS,JS</p>
-                <button><a href="https://github.com/vasossvacioss/TnityPhoto1" target="blank">Mira el Repositorio <i
+                <button><a href="https://github.com/vasossvacioss/TnityPhoto1" target="blank"><i class="fab fa-github"></i> Mira el Repositorio <i
                   class="fas fa-external-link-alt"></i></a>
                 </button>
-                <button><a href="https://vasossvacioss.github.io/Restowebsite1/" target="blank"> Dale una mirada <i
+                <button><a href="https://vasossvacioss.github.io/Restowebsite1/" target="blank"><i class="fas fa-eye"></i> Dale una mirada <i
                   class="fas fa-external-link-alt"></i></a>
               </button>
               </div>
@@ -166,10 +184,10 @@
                 <i class="fab fa-css3-alt"></i>
                 <h2>Ganga Express - Tienda E-commerce Completa</h2>
                 <p>Plataforma de e-commerce full-stack con catálogo de productos, sistema de categorías, búsqueda avanzada y administración de inventario. Desplegada en Railway.</p>
-                <button><a href="https://github.com/vasossvacioss" target="blank">Ver Repositorio <i
+                <button><a href="https://github.com/vasossvacioss" target="blank"><i class="fab fa-github"></i> Ver Repositorio <i
                   class="fas fa-external-link-alt"></i></a>
                 </button>
-                <button><a href="https://gangaexpress25-production.up.railway.app/" target="blank">Visitar Tienda <i
+                <button><a href="https://gangaexpress25-production.up.railway.app/" target="blank"><i class="fas fa-shopping-cart"></i> Visitar Tienda <i
                   class="fas fa-external-link-alt"></i></a>
                 </button>
               </div>
@@ -253,21 +271,63 @@
     <div class="contact" id="contact-me">
       <div class="container">
         <div class="contact-content">
-          <h2>Contacto</h2>
-          <p class="mail">
-            Ponete en contacto conmigo <i class="fas fa-arrow-right"></i> vasossvacioss@gmail.com
+          <h2>¿Listo para trabajar juntos?</h2>
+          <p class="contact-subtitle">
+            Estoy disponible para nuevos proyectos y oportunidades de colaboración
           </p>
-          <p class="links">O buscame en :</p>
-          <a href="https://www.linkedin.com/in/javier-romero-arce-079770118/" target="blank"><i class="fab fa-linkedin">
-              Linkedin</i></a>
-          <a href="https://github.com/vasossvacioss" target="blank"><i class="fab fa-github"></i> Github</a>
-          <a href="https://www.instagram.com/vasossvacioss/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://t.me/Vasossvacioss" target="blank"><i class="fab fa-telegram"></i> Telegram</a>
+          
+          <div class="contact-methods">
+            <a href="mailto:vasossvacioss@gmail.com" class="contact-btn email-btn">
+              <div class="btn-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="btn-content">
+                <span class="btn-title">Enviar Email</span>
+                <span class="btn-subtitle">Contacto directo</span>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/javier-romero-arce-079770118/" target="blank" class="contact-btn linkedin-btn">
+              <div class="btn-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="btn-content">
+                <span class="btn-title">LinkedIn</span>
+                <span class="btn-subtitle">Red profesional</span>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </a>
+
+            <a href="https://github.com/vasossvacioss" target="blank" class="contact-btn github-btn">
+              <div class="btn-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="btn-content">
+                <span class="btn-title">GitHub</span>
+                <span class="btn-subtitle">Ver código</span>
+              </div>
+              <i class="fas fa-arrow-right btn-arrow"></i>
+            </a>
+          </div>
+
+          <div class="contact-footer">
+            <p>Desarrollador Web Full Stack | Buenos Aires, Argentina</p>
+          </div>
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
+      // Loading screen
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loading').classList.add('hidden');
+        }, 1000);
+      });
+
       $(document).ready(function () {
+        // Navbar scroll effect
         $(window).scroll(function () {
           if ($(this).scrollTop() > 550) {
             $('.navbar').addClass('solid');
@@ -276,20 +336,40 @@
             $('.navbar').removeClass('solid');
             $('.back-to-top').removeClass('visible');
           }
-  
         });
-      });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        
-        $("a").on('click', function (event) {  
+
+        // Scroll animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            }
+          });
+        }, observerOptions);
+
+        // Observe elements for animations
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+          observer.observe(el);
+        });
+
+        // Back to top functionality
+        $('#backToTop').click(function() {
+          $('html, body').animate({scrollTop: 0}, 800);
+          return false;
+        });
+
+        // Smooth scroll for navigation
+        $("a[href^='#']").on('click', function (event) {  
           if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-              scrollTop: $(hash).offset().top
+              scrollTop: $(hash).offset().top - 70
             }, 800, function () {
              window.location.hash = hash;
             });
